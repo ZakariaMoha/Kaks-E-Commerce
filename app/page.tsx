@@ -56,21 +56,21 @@ export default function Home() {
             {[
               {
                 name: "Natural Glow Serum",
-                price: "$49.99",
+                price: "Ksh 4,999",
                 image: "https://images.pexels.com/photos/4465829/pexels-photo-4465829.jpeg",
                 rating: 4.9,
                 reviews: 127
               },
               {
                 name: "Hydrating Face Cream",
-                price: "$34.99",
+                price: "Ksh 3,499",
                 image: "https://images.pexels.com/photos/4465624/pexels-photo-4465624.jpeg",
                 rating: 4.8,
                 reviews: 89
               },
               {
                 name: "Wellness Tea Blend",
-                price: "$24.99",
+                price: "Ksh 2,499",
                 image: "https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg",
                 rating: 4.7,
                 reviews: 156

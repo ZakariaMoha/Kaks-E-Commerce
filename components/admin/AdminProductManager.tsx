@@ -304,7 +304,7 @@ export default function AdminProductManager() {
 
                 <div className="grid grid-cols-3 gap-4">
                   <div>
-                    <Label htmlFor="price">Price ($)</Label>
+                    <Label htmlFor="price">Price (Ksh)</Label>
                     <Input
                       id="price"
                       type="number"
@@ -315,7 +315,7 @@ export default function AdminProductManager() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="compare_at_price">Compare Price ($)</Label>
+                    <Label htmlFor="compare_at_price">Compare Price (Ksh)</Label>
                     <Input
                       id="compare_at_price"
                       type="number"
@@ -473,7 +473,7 @@ export default function AdminProductManager() {
                 <TableCell>
                   {product.categories?.name || 'No category'}
                 </TableCell>
-                <TableCell>${product.price?.toFixed(2)}</TableCell>
+                <TableCell>Ksh {product.price?.toFixed(2)}</TableCell>
                 <TableCell>
                   <Badge variant={product.stock_quantity <= 5 ? 'destructive' : 'default'}>
                     {product.stock_quantity} left

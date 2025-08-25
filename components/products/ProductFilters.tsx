@@ -138,7 +138,7 @@ export default function ProductFilters({ categories }: ProductFiltersProps) {
             </h3>
             <Slider
               value={priceRange}
-              onValueChange={setPriceRange}
+              onValueChange={(value) => setPriceRange([value[0], value[1]])}
               max={100}
               min={0}
               step={5}
@@ -157,7 +157,7 @@ export default function ProductFilters({ categories }: ProductFiltersProps) {
               <Checkbox
                 id="in-stock"
                 checked={inStock}
-                onCheckedChange={setInStock}
+                onCheckedChange={(checked) => setInStock(checked === true)}
               />
               <label
                 htmlFor="in-stock"
@@ -175,7 +175,7 @@ export default function ProductFilters({ categories }: ProductFiltersProps) {
               <Checkbox
                 id="featured"
                 checked={featured}
-                onCheckedChange={setFeatured}
+                onCheckedChange={(checked) => setFeatured(checked === true)}
               />
               <label
                 htmlFor="featured"

@@ -449,7 +449,7 @@ export default function CheckoutPage() {
                           <p className="text-sm font-medium">{item.product?.name}</p>
                         </div>
                         <div className="text-sm font-medium">
-                          ${((item.product?.price || 0) * item.quantity).toFixed(2)}
+                          Ksh {((item.product?.price || 0) * item.quantity).toFixed(2)}
                         </div>
                       </div>
                     ))}
@@ -461,31 +461,31 @@ export default function CheckoutPage() {
                   <div className="space-y-2">
                     <div className="flex justify-between">
                       <span>Subtotal</span>
-                      <span>${subtotal.toFixed(2)}</span>
+                      <span>Ksh {subtotal.toFixed(2)}</span>
                     </div>
                     
                     {promoDiscount > 0 && (
                       <div className="flex justify-between text-green-600">
                         <span>Discount</span>
-                        <span>-${promoDiscount.toFixed(2)}</span>
+                        <span>-Ksh {promoDiscount.toFixed(2)}</span>
                       </div>
                     )}
                     
                     <div className="flex justify-between">
                       <span>Tax</span>
-                      <span>${tax.toFixed(2)}</span>
+                      <span>Ksh {tax.toFixed(2)}</span>
                     </div>
                     
                     <div className="flex justify-between">
                       <span>Shipping</span>
-                      <span>{shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}</span>
+                      <span>{shipping === 0 ? 'Free' : `Ksh ${shipping.toFixed(2)}`}</span>
                     </div>
                     
                     <Separator />
                     
                     <div className="flex justify-between text-lg font-bold">
                       <span>Total</span>
-                      <span>${total.toFixed(2)}</span>
+                      <span>Ksh {total.toFixed(2)}</span>
                     </div>
                   </div>
 
@@ -494,7 +494,7 @@ export default function CheckoutPage() {
                     className="w-full bg-green-600 hover:bg-green-700 text-white py-6 text-lg"
                     disabled={processing}
                   >
-                    {processing ? 'Processing...' : `Place Order • $${total.toFixed(2)}`}
+                    {processing ? 'Processing...' : `Place Order • Ksh ${total.toFixed(2)}`}
                   </Button>
 
                   <p className="text-xs text-gray-500 text-center">

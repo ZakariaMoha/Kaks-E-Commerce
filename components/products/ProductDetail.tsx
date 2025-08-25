@@ -237,12 +237,12 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
 
             <div className="flex items-center space-x-4 mb-6">
               <div className="text-3xl font-bold text-green-600">
-                ${product.price.toFixed(2)}
+                Ksh {product.price.toFixed(2)}
               </div>
               {product.compare_at_price && product.compare_at_price > product.price && (
                 <>
                   <div className="text-xl text-gray-500 line-through">
-                    ${product.compare_at_price.toFixed(2)}
+                    Ksh {product.compare_at_price.toFixed(2)}
                   </div>
                   <Badge variant="destructive">Save {discount}%</Badge>
                 </>
@@ -369,11 +369,11 @@ export default function ProductDetail({ product, relatedProducts }: ProductDetai
                       </h3>
                       <div className="flex items-center justify-between">
                         <span className="text-lg font-bold text-green-600">
-                          ${relatedProduct.price.toFixed(2)}
+                          Ksh {relatedProduct.price.toFixed(2)}
                         </span>
                         {relatedProduct.compare_at_price && (
                           <span className="text-sm text-gray-500 line-through">
-                            ${relatedProduct.compare_at_price.toFixed(2)}
+                            Ksh {relatedProduct.compare_at_price.toFixed(2)}
                           </span>
                         )}
                       </div>

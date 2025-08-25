@@ -292,11 +292,11 @@ export default function CartPage() {
                       </h3>
                       <div className="flex items-center space-x-4 mt-2">
                         <span className="text-lg font-bold text-green-600">
-                          ${item.product?.price?.toFixed(2)}
+                          Ksh {item.product?.price?.toFixed(2)}
                         </span>
                         {item.product?.compare_at_price && (
                           <span className="text-sm text-gray-500 line-through">
-                            ${item.product.compare_at_price.toFixed(2)}
+                            Ksh {item.product.compare_at_price.toFixed(2)}
                           </span>
                         )}
                       </div>
@@ -337,7 +337,7 @@ export default function CartPage() {
 
                     <div className="text-right">
                       <div className="text-lg font-bold">
-                        ${((item.product?.price || 0) * item.quantity).toFixed(2)}
+                        Ksh {((item.product?.price || 0) * item.quantity).toFixed(2)}
                       </div>
                     </div>
                   </div>
@@ -355,31 +355,31 @@ export default function CartPage() {
               <CardContent className="space-y-4">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
-                  <span>${subtotal.toFixed(2)}</span>
+                  <span>Ksh {subtotal.toFixed(2)}</span>
                 </div>
                 
                 {appliedPromo && (
                   <div className="flex justify-between text-green-600">
                     <span>Discount ({appliedPromo.code})</span>
-                    <span>-${promoDiscount.toFixed(2)}</span>
+                    <span>-Ksh {promoDiscount.toFixed(2)}</span>
                   </div>
                 )}
                 
                 <div className="flex justify-between">
                   <span>Tax</span>
-                  <span>${tax.toFixed(2)}</span>
+                  <span>Ksh {tax.toFixed(2)}</span>
                 </div>
                 
                 <div className="flex justify-between">
                   <span>Shipping</span>
-                  <span>{shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}</span>
+                  <span>{shipping === 0 ? 'Free' : `Ksh ${shipping.toFixed(2)}`}</span>
                 </div>
                 
                 <Separator />
                 
                 <div className="flex justify-between text-lg font-bold">
                   <span>Total</span>
-                  <span>${total.toFixed(2)}</span>
+                  <span>Ksh {total.toFixed(2)}</span>
                 </div>
               </CardContent>
             </Card>

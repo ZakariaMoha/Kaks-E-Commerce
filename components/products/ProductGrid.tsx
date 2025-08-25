@@ -150,11 +150,11 @@ export default function ProductGrid({ products }: ProductGridProps) {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <span className="text-xl font-bold text-green-600">
-                      ${product.price.toFixed(2)}
+                      Ksh {product.price.toFixed(2)}
                     </span>
                     {product.compare_at_price && product.compare_at_price > product.price && (
                       <span className="text-sm text-gray-500 line-through">
-                        ${product.compare_at_price.toFixed(2)}
+                        Ksh {product.compare_at_price.toFixed(2)}
                       </span>
                     )}
                   </div>

@@ -91,7 +91,7 @@ export default function AdminAnalytics() {
       });
 
       // Order status distribution
-      const statusCounts = orders.reduce((acc, order) => {
+      const statusCounts = orders.reduce((acc: Record<string, number>, order) => {
         acc[order.status] = (acc[order.status] || 0) + 1;
         return acc;
       }, {});
@@ -133,7 +133,7 @@ export default function AdminAnalytics() {
         }));
 
       // Product category breakdown
-      const categoryBreakdown = {};
+      const categoryBreakdown: Record<string, number> = {};
       products.forEach(product => {
         const category = product.category_id || 'Uncategorized';
         categoryBreakdown[category] = (categoryBreakdown[category] || 0) + 1;

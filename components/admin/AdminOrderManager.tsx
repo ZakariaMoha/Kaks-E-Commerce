@@ -101,7 +101,7 @@ export default function AdminOrderManager() {
       toast.success(`Order status updated to ${newStatus}`);
       loadOrders();
       if (selectedOrder?.id === orderId) {
-        setSelectedOrder(prev => ({ ...prev, status: newStatus }));
+        setSelectedOrder((prev: any) => ({ ...prev, status: newStatus }));
       }
     }
   };
@@ -183,7 +183,7 @@ export default function AdminOrderManager() {
                     <p className="text-sm text-gray-500">{order.email}</p>
                   </div>
                 </TableCell>
-                <TableCell>${order.total_amount.toFixed(2)}</TableCell>
+                <TableCell>Ksh {order.total_amount.toFixed(2)}</TableCell>
                 <TableCell>
                   <Badge variant={getStatusColor(order.status)}>
                     <span className="flex items-center gap-1">
