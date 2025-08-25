@@ -64,7 +64,7 @@ export default function Home() {
               {
                 name: "Hydrating Face Cream",
                 price: "Ksh 3,499",
-                image: "https://images.pexels.com/photos/4465624/pexels-photo-4465624.jpeg",
+                image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRkUa2JHrMVp6Lm_y94UOpNDiKOztC_Bc6cjRnZ2gz39EL0zXUtqwFC-d6I_M2r2fqxiV4SZ3Ntj-zUhotSmLGfWcSh3cTC4lJoxp_iUBhvgrZWlzt96PeYla1MW3XLrhvYhFTWR7Yzk_o&usqp=CAc",
                 rating: 4.8,
                 reviews: 89
               },
